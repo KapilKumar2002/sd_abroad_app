@@ -49,13 +49,8 @@ class _EmptyBookmarkState extends State<EmptyBookmark>
             ],
           ),
           Expanded(
-              child: TabBarView(controller: tab, children: [
-            BMUni(
-              un: 3,
-            ),
-            BMCou_0(),
-            BMAcc_0()
-          ]))
+              child: TabBarView(
+                  controller: tab, children: [BMUni(), BMCou_0(), BMAcc_0()]))
         ],
       ),
     );

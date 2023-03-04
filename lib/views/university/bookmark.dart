@@ -64,69 +64,79 @@ class _BookmarkState extends State<Bookmark> {
                   )),
             ),
             verticalSpace(18),
-            Container(
-                decoration: decoration(white, 12),
-                height: 84,
-                child: Stack(
-                  children: [
-                    ListTile(
-                      leading: Image.asset("assets/images/course.png"),
-                      title: Text(
-                        "Universities (3)",
-                        style: bodyText16w500(black),
+            InkWell(
+              onTap: () {
+                nextScreen(context, EmptyBookmark());
+              },
+              child: Container(
+                  decoration: decoration(white, 12),
+                  height: 84,
+                  child: Stack(
+                    children: [
+                      ListTile(
+                        leading: Image.asset("assets/images/course.png"),
+                        title: Text(
+                          "Universities (3)",
+                          style: bodyText16w500(black),
+                        ),
+                        subtitle: Text(
+                          "Find all your bookmarked Universities",
+                          style: bodyText10w500(black.withOpacity(.5)),
+                        ),
                       ),
-                      subtitle: Text(
-                        "Find all your bookmarked Universities",
-                        style: bodyText10w500(black.withOpacity(.5)),
-                      ),
-                    ),
-                    Align(
-                      alignment: AlignmentDirectional.topEnd,
-                      child: Container(
-                        height: 25,
-                        width: 90,
-                        decoration: BoxDecoration(
-                            color: tabColor,
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(12),
-                              topRight: Radius.circular(12),
-                            )),
-                      ),
-                    )
-                  ],
-                )),
+                      Align(
+                        alignment: AlignmentDirectional.topEnd,
+                        child: Container(
+                          height: 25,
+                          width: 90,
+                          decoration: BoxDecoration(
+                              color: tabColor,
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(12),
+                                topRight: Radius.circular(12),
+                              )),
+                        ),
+                      )
+                    ],
+                  )),
+            ),
             verticalSpace(18),
-            Container(
-                decoration: decoration(white, 12),
-                height: 84,
-                child: Stack(
-                  children: [
-                    ListTile(
-                      leading: Image.asset("assets/images/acco.png"),
-                      title: Text(
-                        "Universities (3)",
-                        style: bodyText16w500(black),
+            InkWell(
+              onTap: () {
+                nextScreen(context, EmptyBookmark());
+              },
+              child: Container(
+                  decoration: decoration(white, 12),
+                  height: 84,
+                  child: Stack(
+                    children: [
+                      ListTile(
+                        leading: Image.asset("assets/images/acco.png"),
+                        title: Text(
+                          "Universities (3)",
+                          style: bodyText16w500(black),
+                        ),
+                        subtitle: Text(
+                          "Find all your bookmarked Universities",
+                          style: bodyText10w500(black.withOpacity(.5)),
+                        ),
                       ),
-                      subtitle: Text(
-                        "Find all your bookmarked Universities",
-                        style: bodyText10w500(black.withOpacity(.5)),
-                      ),
-                    ),
-                    Align(
-                      alignment: AlignmentDirectional.topEnd,
-                      child: Container(
-                        height: 25,
-                        width: 90,
-                        decoration: BoxDecoration(
-                            color: tabColor,
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(12),
-                              topRight: Radius.circular(12),
-                            )),
-                      ),
-                    )
-                  ],
-                )),
+                      Align(
+                        alignment: AlignmentDirectional.topEnd,
+                        child: Container(
+                          height: 25,
+                          width: 90,
+                          decoration: BoxDecoration(
+                              color: tabColor,
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(12),
+                                topRight: Radius.circular(12),
+                              )),
+                        ),
+                      )
+                    ],
+                  )),
+            ),
           ],
         ),
       ),

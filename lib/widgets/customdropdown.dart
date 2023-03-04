@@ -59,7 +59,7 @@ class _CustomDropDownState extends State<CustomDropDown> {
                 style: widget.textStyle ?? bodyText12w500(primaryColor),
               ),
               style: bodyText12w500(primaryColor),
-              dropdownColor: white,
+              dropdownColor: widget.dropdownColor ?? white,
               underline: SizedBox(),
               isExpanded: true,
               items: widget.list.map((e) {

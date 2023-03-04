@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:sd_abroad_app/utils/constants.dart';
+import 'package:sd_abroad_app/views/accommodation/result.dart';
 import 'package:sd_abroad_app/views/destination/destination.dart';
 import 'package:sd_abroad_app/views/exam/referandearn.dart';
 import 'package:sd_abroad_app/views/mainscreens/educationgui.dart';
 import 'package:sd_abroad_app/views/mainscreens/myuniversity.dart';
-import 'package:sd_abroad_app/views/mainscreens/referearn.dart';
-import 'package:sd_abroad_app/views/university/managementcourses.dart';
+import 'package:sd_abroad_app/views/university/coursesviewall.dart';
+import 'package:sd_abroad_app/views/university/university.dart';
 import 'package:sd_abroad_app/widgets/navigation.dart';
 
 class HomePage extends StatefulWidget {
@@ -105,85 +106,100 @@ class _HomePageState extends State<HomePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      width: 100,
-                      decoration: decoration(white, 10),
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 15, vertical: 12),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            "assets/images/quest.png",
-                            height: 40,
-                            width: 40,
-                            fit: BoxFit.fill,
-                          ),
-                          verticalSpace(8),
-                          Text(
-                            "Quest University",
-                            style: bodyText10w500(black),
-                            textAlign: TextAlign.center,
-                          ),
-                          verticalSpace(4),
-                          Text(
-                            "230+ Universities",
-                            style: bodyText8w500(primaryColor),
-                          )
-                        ],
+                    InkWell(
+                      onTap: () {
+                        nextScreen(context, UniversityScreen());
+                      },
+                      child: Container(
+                        width: 100,
+                        decoration: decoration(white, 10),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 12),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              "assets/images/quest.png",
+                              height: 40,
+                              width: 40,
+                              fit: BoxFit.fill,
+                            ),
+                            verticalSpace(8),
+                            Text(
+                              "Quest University",
+                              style: bodyText10w500(black),
+                              textAlign: TextAlign.center,
+                            ),
+                            verticalSpace(4),
+                            Text(
+                              "230+ Universities",
+                              style: bodyText8w500(primaryColor),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                    Container(
-                      width: 100,
-                      decoration: decoration(white, 10),
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 15, vertical: 12),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            "assets/images/quest.png",
-                            height: 40,
-                            width: 40,
-                            fit: BoxFit.fill,
-                          ),
-                          verticalSpace(8),
-                          Text(
-                            "Quest University",
-                            style: bodyText10w500(black),
-                            textAlign: TextAlign.center,
-                          ),
-                          verticalSpace(4),
-                          Text(
-                            "230+ Universities",
-                            style: bodyText8w500(primaryColor),
-                          )
-                        ],
+                    InkWell(
+                      onTap: () {
+                        nextScreen(context, UniversityScreen());
+                      },
+                      child: Container(
+                        width: 100,
+                        decoration: decoration(white, 10),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 12),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              "assets/images/quest.png",
+                              height: 40,
+                              width: 40,
+                              fit: BoxFit.fill,
+                            ),
+                            verticalSpace(8),
+                            Text(
+                              "Quest University",
+                              style: bodyText10w500(black),
+                              textAlign: TextAlign.center,
+                            ),
+                            verticalSpace(4),
+                            Text(
+                              "230+ Universities",
+                              style: bodyText8w500(primaryColor),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                    Container(
-                      width: 100,
-                      decoration: decoration(white, 10),
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 15, vertical: 12),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            "assets/images/quest.png",
-                            height: 40,
-                            width: 40,
-                            fit: BoxFit.fill,
-                          ),
-                          verticalSpace(8),
-                          Text(
-                            "Quest University",
-                            style: bodyText10w500(black),
-                            textAlign: TextAlign.center,
-                          ),
-                          verticalSpace(4),
-                          Text(
-                            "230+ Universities",
-                            style: bodyText8w500(primaryColor),
-                          )
-                        ],
+                    InkWell(
+                      onTap: () {
+                        nextScreen(context, UniversityScreen());
+                      },
+                      child: Container(
+                        width: 100,
+                        decoration: decoration(white, 10),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 12),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              "assets/images/quest.png",
+                              height: 40,
+                              width: 40,
+                              fit: BoxFit.fill,
+                            ),
+                            verticalSpace(8),
+                            Text(
+                              "Quest University",
+                              style: bodyText10w500(black),
+                              textAlign: TextAlign.center,
+                            ),
+                            verticalSpace(4),
+                            Text(
+                              "230+ Universities",
+                              style: bodyText8w500(primaryColor),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -200,36 +216,42 @@ class _HomePageState extends State<HomePage> {
                       shrinkWrap: true,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
-                        return Container(
-                          width: 142,
-                          decoration: decoration(white, 10),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Image.asset(
-                                "assets/images/unite.png",
-                                height: 63,
-                                width: 142,
-                                fit: BoxFit.cover,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "United Kingdom",
-                                      style: bodyText10w500(black),
-                                    ),
-                                    verticalSpace(4),
-                                    Text(
-                                      "900+ Properties",
-                                      style: bodyText8w500(primaryColor),
-                                    ),
-                                  ],
+                        return InkWell(
+                          onTap: () {
+                            nextScreen(context, AccommodationResult());
+                          },
+                          child: Container(
+                            width: 142,
+                            decoration: decoration(white, 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Image.asset(
+                                  "assets/images/unite.png",
+                                  height: 63,
+                                  width: 142,
+                                  fit: BoxFit.cover,
                                 ),
-                              ),
-                            ],
+                                Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "United Kingdom",
+                                        style: bodyText10w500(black),
+                                      ),
+                                      verticalSpace(4),
+                                      Text(
+                                        "900+ Properties",
+                                        style: bodyText8w500(primaryColor),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         );
                       },
@@ -252,7 +274,7 @@ class _HomePageState extends State<HomePage> {
                       itemBuilder: (context, index) {
                         return InkWell(
                           onTap: () {
-                            nextScreen(context, ManagementCourses());
+                            nextScreen(context, CoursesViewAll());
                           },
                           child: Container(
                             decoration: decoration(white, 10),
@@ -437,28 +459,33 @@ class _HomePageState extends State<HomePage> {
                       shrinkWrap: true,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
-                        return Container(
-                            height: 118,
-                            width: 180,
-                            child: ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assets/images/ou.png",
-                                      height: 118,
-                                      width: 180,
-                                      fit: BoxFit.fill,
-                                    ),
-                                    Align(
-                                      alignment: AlignmentDirectional.center,
-                                      child: Image.asset(
-                                        "assets/images/play.png",
-                                        height: 36,
+                        return InkWell(
+                          onTap: () {
+                            nextScreen(context, EducationGuidance());
+                          },
+                          child: Container(
+                              height: 118,
+                              width: 180,
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(12),
+                                  child: Stack(
+                                    children: [
+                                      Image.asset(
+                                        "assets/images/ou.png",
+                                        height: 118,
+                                        width: 180,
+                                        fit: BoxFit.fill,
                                       ),
-                                    )
-                                  ],
-                                )));
+                                      Align(
+                                        alignment: AlignmentDirectional.center,
+                                        child: Image.asset(
+                                          "assets/images/play.png",
+                                          height: 36,
+                                        ),
+                                      )
+                                    ],
+                                  ))),
+                        );
                       },
                       separatorBuilder: (context, index) {
                         return horizontalSpace(14);

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sd_abroad_app/utils/constants.dart';
 import 'package:sd_abroad_app/views/exam/languagecourse.dart';
+import 'package:sd_abroad_app/views/university/managementcourses.dart';
 import 'package:sd_abroad_app/widgets/customdropdown.dart';
 import 'package:sd_abroad_app/widgets/customtextfield.dart';
 import 'package:sd_abroad_app/widgets/navigation.dart';
@@ -13,6 +14,14 @@ class StartJourney extends StatefulWidget {
 }
 
 class _StartJourneyState extends State<StartJourney> {
+  List item = [
+    "lorem",
+    "lorem",
+    "lorem",
+    "lorem",
+    "lorem",
+    "lorem",
+  ];
   double currentSliderValue = 5;
   @override
   Widget build(BuildContext context) {
@@ -222,7 +231,7 @@ class _StartJourneyState extends State<StartJourney> {
                     ),
                     verticalSpace(12),
                     CustomDropDown(
-                      list: [],
+                      list: item,
                       height: 44,
                       hint: "Select",
                       dropdownColor: white,
@@ -320,7 +329,7 @@ class _StartJourneyState extends State<StartJourney> {
                     ),
                     verticalSpace(10),
                     CustomDropDown(
-                      list: [],
+                      list: item,
                       height: 44,
                       hint: "Select",
                       dropdownColor: white,
@@ -336,7 +345,7 @@ class _StartJourneyState extends State<StartJourney> {
                     ),
                     verticalSpace(10),
                     CustomDropDown(
-                      list: [],
+                      list: item,
                       height: 44,
                       hint: "Select",
                       dropdownColor: white,
@@ -416,7 +425,7 @@ class _StartJourneyState extends State<StartJourney> {
                     verticalSpace(30),
                     InkWell(
                       onTap: () {
-                        nextScreen(context, LanguageCourses());
+                        nextScreen(context, ManagementCourses());
                       },
                       child: Container(
                         padding: EdgeInsets.symmetric(vertical: 15),

@@ -208,7 +208,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
               "App Version : 1.1",
               style: bodyText12w500(black.withOpacity(.25)),
             ),
-          )
+          ),
+          verticalSpace(40)
         ],
       ),
     );

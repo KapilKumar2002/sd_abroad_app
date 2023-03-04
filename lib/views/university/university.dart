@@ -4,6 +4,7 @@ import 'package:sd_abroad_app/views/university/bookmark.dart';
 import 'package:sd_abroad_app/views/university/course.dart';
 import 'package:sd_abroad_app/views/university/faqs.dart';
 import 'package:sd_abroad_app/views/university/overviewuni.dart';
+import 'package:sd_abroad_app/widgets/endDrawer.dart';
 import 'package:sd_abroad_app/widgets/navigation.dart';
 
 class UniversityScreen extends StatefulWidget {
@@ -15,10 +16,13 @@ class UniversityScreen extends StatefulWidget {
 
 class _UniversityScreenState extends State<UniversityScreen>
     with TickerProviderStateMixin {
+  GlobalKey<ScaffoldState> key = GlobalKey();
   @override
   Widget build(BuildContext context) {
     final tab = TabController(length: 3, vsync: this);
     return Scaffold(
+      key: key,
+      endDrawer: EndDrawerWidget(),
       floatingActionButton: Container(
         height: 48,
         child: FloatingActionButton(
@@ -31,6 +35,11 @@ class _UniversityScreenState extends State<UniversityScreen>
         foregroundColor: black,
         backgroundColor: transparent,
         elevation: 0,
+        leading: IconButton(
+            onPressed: () {
+              goBack(context);
+            },
+            icon: Icon(Icons.arrow_back)),
         title: Text("Cranfield University"),
         actions: [
           IconButton(
@@ -117,9 +126,13 @@ class _UniversityScreenState extends State<UniversityScreen>
             ),
             Container(
               height: 1500,
-              child: TabBarView(
-                  controller: tab,
-                  children: [OverviewUni(), Courses(), FaqS()]),
+              child: TabBarView(controller: tab, children: [
+                OverviewUni(),
+                Courses(
+                  Skey: key,
+                ),
+                FaqS()
+              ]),
             ),
           ],
         ),

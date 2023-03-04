@@ -4,7 +4,8 @@ import 'package:sd_abroad_app/views/university/search.dart';
 import 'package:sd_abroad_app/widgets/navigation.dart';
 
 class Courses extends StatefulWidget {
-  const Courses({super.key});
+  final GlobalKey<ScaffoldState> Skey;
+  const Courses({super.key, required this.Skey});
 
   @override
   State<Courses> createState() => _CoursesState();
@@ -41,7 +42,10 @@ class _CoursesState extends State<Courses> {
               )),
               horizontalSpace(20),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  widget.Skey.currentState!.openEndDrawer();
+                  print("object");
+                },
                 child: Container(
                   decoration: decoration(tabColor, 6),
                   padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
