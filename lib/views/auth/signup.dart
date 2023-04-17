@@ -22,7 +22,7 @@ class SignUp extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    verticalSpace(35),
+                    verticalSpace(height(context) * 0.07),
                     InkWell(
                       onTap: () {
                         nextScreen(context, LogIn());

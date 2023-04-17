@@ -13,7 +13,7 @@ class _Step_3State extends State<Step_3> {
   Widget build(BuildContext context) {
     return Container(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text.rich(TextSpan(children: [
             TextSpan(

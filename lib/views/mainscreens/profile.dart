@@ -32,8 +32,8 @@ class _ProfilePageState extends State<ProfilePage> {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
                         gradient: LinearGradient(colors: [
-                          primaryColor.withOpacity(.5),
-                          primaryColor
+                          Color.fromRGBO(163, 175, 255, 1),
+                          Color.fromRGBO(95, 113, 228, 1),
                         ])),
                     child: ListTile(
                       title: Text(

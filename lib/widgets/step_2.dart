@@ -37,7 +37,7 @@ class _Step_2State extends State<Step_2> {
                   color: black.withOpacity(.15),
                   child: Center(
                     child: Text(
-                      "Bachelor's",
+                      "Subject Wise",
                       style: bodyText14w500(white),
                     ),
                   ),

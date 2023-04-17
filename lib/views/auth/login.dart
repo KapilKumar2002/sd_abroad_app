@@ -29,7 +29,7 @@ class _LogInState extends State<LogIn> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    verticalSpace(35),
+                    verticalSpace(height(context) * 0.07),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -130,7 +130,7 @@ class _LogInState extends State<LogIn> {
                 ),
                 CustomButton(
                   onClick: () {
-                    nextScreen(context, BottomNav());
+                    nextScreen(context, MyBottomBar());
                   },
                   buttonColor: primaryColor,
                   title: "Continue",

@@ -26,7 +26,7 @@ class _GPACalculatorState extends State<GPACalculator> {
         child: Container(
           color: background,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

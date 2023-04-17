@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:sd_abroad_app/utils/constants.dart';
 import 'package:sd_abroad_app/views/accommodation/result.dart';
 import 'package:sd_abroad_app/views/destination/destination.dart';
+import 'package:sd_abroad_app/views/exam/ielts.dart';
 import 'package:sd_abroad_app/views/exam/referandearn.dart';
 import 'package:sd_abroad_app/views/mainscreens/educationgui.dart';
 import 'package:sd_abroad_app/views/mainscreens/myuniversity.dart';
+import 'package:sd_abroad_app/views/mainscreens/test_prep.dart';
 import 'package:sd_abroad_app/views/university/coursesviewall.dart';
 import 'package:sd_abroad_app/views/university/university.dart';
 import 'package:sd_abroad_app/widgets/navigation.dart';
+
+import '../exam/languagecourse.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -42,7 +46,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 verticalSpace(10),
                 Container(
-                  height: 110,
+                  height: 114,
                   child: ListView.separated(
                       shrinkWrap: true,
                       scrollDirection: Axis.horizontal,
@@ -52,6 +56,8 @@ class _HomePageState extends State<HomePage> {
                             nextScreen(context, DestinationOverviewScreen());
                           },
                           child: Container(
+                            height: 114,
+                            width: width(context) * 0.27,
                             decoration: decoration(white, 10),
                             padding: EdgeInsets.symmetric(
                                 horizontal: 15, vertical: 12),
@@ -261,9 +267,19 @@ class _HomePageState extends State<HomePage> {
                       itemCount: 5),
                 ),
                 verticalSpace(10),
-                Text(
-                  "Courses",
-                  style: bodyText14w500(black),
+                Row(
+                  children: [
+                    Text(
+                      "Courses & Language Courses ",
+                      style: bodyText14w500(black),
+                    ),
+                    const Spacer(),
+                    TextButton(
+                        onPressed: () {
+                          nextScreen(context, CoursesViewAll());
+                        },
+                        child: Text('View All'))
+                  ],
                 ),
                 verticalSpace(10),
                 Container(
@@ -274,11 +290,11 @@ class _HomePageState extends State<HomePage> {
                       itemBuilder: (context, index) {
                         return InkWell(
                           onTap: () {
-                            nextScreen(context, CoursesViewAll());
+                            nextScreen(context, const LanguageCourses());
                           },
                           child: Container(
                             decoration: decoration(white, 10),
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 horizontal: 15, vertical: 10),
                             child: Column(
                               children: [
@@ -290,6 +306,58 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 Text(
                                   "Management",
+                                  style: bodyText10w500(black),
+                                )
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                      separatorBuilder: (context, index) {
+                        return horizontalSpace(10);
+                      },
+                      itemCount: 5),
+                ),
+                verticalSpace(10),
+                Row(
+                  children: [
+                    Text(
+                      "Exam Preparation",
+                      style: bodyText14w500(black),
+                    ),
+                    const Spacer(),
+                    TextButton(
+                        onPressed: () {
+                          nextScreen(context, TestPrep());
+                        },
+                        child: Text('View All'))
+                  ],
+                ),
+                verticalSpace(10),
+                Container(
+                  height: 110,
+                  child: ListView.separated(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        return InkWell(
+                          onTap: () {
+                            nextScreen(context, const IELTSExamScreen());
+                          },
+                          child: Container(
+                            decoration: decoration(white, 10),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 15, vertical: 10),
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                  "assets/images/manag.png",
+                                  height: 75,
+                                  width: 80,
+                                  fit: BoxFit.fill,
+                                ),
+                                Text(
+                                  "TOEFL",
                                   style: bodyText10w500(black),
                                 )
                               ],

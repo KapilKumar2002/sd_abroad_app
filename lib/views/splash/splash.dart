@@ -18,12 +18,12 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     // TODO: implement initState
-    Timer(Duration(seconds: 4), () {
+    Timer(Duration(seconds: 2), () {
       setState(() {
         bColor = black;
         image = "assets/images/ylogo.png";
       });
-      Timer(Duration(seconds: 4), () => nextScreen(context, LogIn()));
+      Timer(Duration(seconds: 2), () => nextScreen(context, LogIn()));
     });
     super.initState();
   }

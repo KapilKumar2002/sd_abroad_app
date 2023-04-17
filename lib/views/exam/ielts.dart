@@ -33,9 +33,6 @@ class _IELTSExamScreenState extends State<IELTSExamScreen>
             Tab(
               text: "Courses",
             ),
-            Tab(
-              text: "Ranking",
-            ),
           ],
           indicatorSize: TabBarIndicatorSize.label,
           controller: tab,

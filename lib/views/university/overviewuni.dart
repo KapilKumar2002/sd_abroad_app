@@ -150,7 +150,7 @@ class _OverviewUniState extends State<OverviewUni> {
               ],
             ),
           ),
-          verticalSpace(35),
+          verticalSpace(20),
           Text(
             "Get in Touch",
             style: bodyText16w500(black),
@@ -210,7 +210,7 @@ class _OverviewUniState extends State<OverviewUni> {
               ),
             ],
           ),
-          verticalSpace(15),
+          verticalSpace(20),
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
             child: Image.asset(
@@ -220,7 +220,7 @@ class _OverviewUniState extends State<OverviewUni> {
               fit: BoxFit.cover,
             ),
           ),
-          verticalSpace(35),
+          verticalSpace(20),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -239,7 +239,7 @@ class _OverviewUniState extends State<OverviewUni> {
               )
             ],
           ),
-          verticalSpace(14),
+          verticalSpace(8),
           Container(
             height: 110,
             child: ListView.separated(
@@ -316,12 +316,12 @@ class _OverviewUniState extends State<OverviewUni> {
               },
             ),
           ),
-          verticalSpace(25),
+          verticalSpace(10),
           Text(
             "Similar Universities",
             style: bodyText16w500(black),
           ),
-          verticalSpace(15),
+          verticalSpace(8),
           Container(
             height: 120,
             child: ListView.separated(
